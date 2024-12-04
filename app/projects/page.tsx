@@ -93,7 +93,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
 
-          <div className="flex flex-col w-full gap-8 mx-auto border-t border-border lg:mx-0 lg:border-t-0">
+          <div className="flex flex-col w-full gap-8 mx-auto pt-8 border-t border-border lg:mx-0 lg:border-t-0 lg:pt-0">
             {[top2, top3].map((project) => (
               <Card key={project.slug}>
                 <Article project={project} views={views[project.slug] ?? 0} />
