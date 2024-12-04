@@ -2,6 +2,7 @@
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
+import { ModeToggle } from "./mode-toggle";
 
 export const Navigation: React.FC = () => {
 	const ref = useRef<HTMLElement>(null);
@@ -40,6 +41,7 @@ export const Navigation: React.FC = () => {
 						>
 							Contact
 						</Link>
+						<ModeToggle />
 					</div>
 
 					<Link
