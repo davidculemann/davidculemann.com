@@ -1,6 +1,8 @@
+@import "../styles/dummy.css";
+
+@tailwind utilities;
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 @layer base {
   .text-edge-outline {
