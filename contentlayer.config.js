@@ -1,10 +1,10 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { defineDocumentType, makeSource } from "contentlayer2/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
+/** @type {import('contentlayer2/source-files').ComputedFields} */
 const computedFields = {
   path: {
     type: "string",
@@ -66,6 +66,7 @@ export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Page, Project],
   mdx: {
+    useDynamicImport: true,
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,

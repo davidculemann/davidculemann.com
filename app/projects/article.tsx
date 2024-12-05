@@ -1,3 +1,5 @@
+"use client";
+
 import type { Project } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { Eye } from "lucide-react";

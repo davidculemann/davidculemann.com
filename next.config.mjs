@@ -1,4 +1,4 @@
-import { withContentlayer } from "next-contentlayer";
+import { withContentlayer } from "next-contentlayer2";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -6,7 +6,6 @@ const nextConfig = {
 	experimental: {
 	  mdxRs: true,
 	},
-	swcMinify: true,
 	reactStrictMode: true,
 	poweredByHeader: false,
 	webpack: (config) => {
