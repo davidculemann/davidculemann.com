@@ -1,9 +1,9 @@
 import "../global.css";
-import { Inter } from 'next/font/google';
-import localFont from 'next/font/local';
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
-import { ThemeProvider } from "@/app/components/providers/theme-provider"
+import { ThemeProvider } from "@/app/components/providers/theme-provider";
 
 export const metadata: Metadata = {
   title: {
@@ -13,8 +13,7 @@ export const metadata: Metadata = {
   description: "My personal website.",
   openGraph: {
     title: "davidculemann.com",
-    description:
-      "My personal website.",
+    description: "My personal website.",
     url: "https://davidculemann.com",
     siteName: "davidculemann.com",
     images: [
@@ -58,7 +57,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={[inter.variable, calSans.variable].join(" ")}
+      suppressHydrationWarning
+    >
       <head>
         <Analytics />
       </head>
@@ -67,11 +70,7 @@ export default function RootLayout({
           process.env.NODE_ENV === "development" ? "debug-screens" : undefined
         }`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-        >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
       </body>

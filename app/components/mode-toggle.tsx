@@ -8,7 +8,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-  TooltipProvider
+  TooltipProvider,
 } from "@/app/components/ui/tooltip";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 

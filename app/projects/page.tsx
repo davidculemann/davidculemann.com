@@ -15,12 +15,17 @@ export default async function ProjectsPage() {
     await redis.mget<number[]>(
       ...allProjects.map((p) => ["pageviews", "projects", p.slug].join(":")),
     )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
-    return acc;
-  }, {} as Record<string, number>);
+  ).reduce(
+    (acc, v, i) => {
+      acc[allProjects[i].slug] = v ?? 0;
+      return acc;
+    },
+    {} as Record<string, number>,
+  );
 
-  const featured = allProjects.find((project) => project.slug === "placeholder")!;
+  const featured = allProjects.find(
+    (project) => project.slug === "placeholder",
+  )!;
   const top2 = allProjects.find((project) => project.slug === "placeholder")!;
   const top3 = allProjects.find((project) => project.slug === "placeholder")!;
   const sorted = allProjects
