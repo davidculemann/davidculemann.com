@@ -1,12 +1,10 @@
-@import "../styles/dummy.css";
-
 @tailwind utilities;
 @tailwind base;
 @tailwind components;
 
 @layer base {
   .text-edge-outline {
-    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
   :root {
     --background: 0 0% 100%;
@@ -70,5 +68,4 @@
   body {
     @apply bg-background text-foreground;
   }
-} 
-
+}
