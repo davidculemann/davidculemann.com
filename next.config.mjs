@@ -12,8 +12,7 @@ const nextConfig = {
 	webpack: (config) => {
 	  config.optimization.moduleIds = 'deterministic';
 	  return config;
-	},
-	transpilePackages: ['@opentelemetry/api']
+	}
   };
 
 export default withContentlayer(nextConfig);
