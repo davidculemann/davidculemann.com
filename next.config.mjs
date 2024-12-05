@@ -10,6 +10,7 @@ const nextConfig = {
 	poweredByHeader: false,
 	webpack: (config) => {
 	  config.optimization.moduleIds = 'deterministic';
+	  config.optimization.minimize = true;
 	  return config;
 	}
   };

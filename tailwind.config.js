@@ -158,14 +158,4 @@ module.exports = {
     require("tailwindcss-debug-screens"),
     require("tailwindcss-animate"),
   ],
-  safelist: [
-    'dark:rotate-0',
-    'dark:scale-100',
-    'dark:-rotate-90',
-    'dark:scale-0',
-    {
-      pattern: /^lg:/,
-      variants: ['dark', 'hover', 'focus']
-    }
-  ]
 };
