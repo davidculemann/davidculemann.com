@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 4000",
     "fmt": "pnpm rome check . --apply-unsafe && pnpm rome format . --write",
     "format": "npx prettier --write ."
   },
@@ -53,7 +53,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@opentelemetry/api": "1.4.1",
+      "@opentelemetry/api": "1.6.0",
       "@opentelemetry/core": "1.13.0",
       "@opentelemetry/exporter-trace-otlp-grpc": "0.39.1",
       "@opentelemetry/resources": "1.13.0",

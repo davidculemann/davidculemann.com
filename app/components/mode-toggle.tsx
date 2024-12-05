@@ -14,6 +14,7 @@ import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export function ModeToggle() {
   const { setTheme, theme } = useTheme();
+  console.log(theme);
 
   return (
     <TooltipProvider disableHoverableContent>
