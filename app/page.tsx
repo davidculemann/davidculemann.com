@@ -29,7 +29,7 @@ export default function Home() {
         quantity={100}
       />
       <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-foreground cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
-        davidculemann
+        david culemann
       </h1>
 
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-foreground/0 via-foreground/50 to-foreground/0" />
