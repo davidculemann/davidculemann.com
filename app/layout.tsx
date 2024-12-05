@@ -58,22 +58,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")} suppressHydrationWarning>
-      <head>
-        <Analytics />
-      </head>
-      <body
-        className={`bg-background ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} ${calSans.variable}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
+          disableTransitionOnChange
+          storageKey="theme"
         >
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
