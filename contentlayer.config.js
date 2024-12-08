@@ -46,7 +46,7 @@ export const Project = defineDocumentType(() => ({
             type: "string",
         },
         logoLight: {
-            type: "string",
+            type: "boolean",
         },
         professional: {
             type: "boolean",

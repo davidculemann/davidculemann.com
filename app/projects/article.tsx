@@ -5,7 +5,6 @@ import Link from "next/link";
 import { Eye } from "lucide-react";
 import Image from "next/image";
 import ProfessionalPill from "../components/professional-pill";
-import { useTheme } from "next-themes";
 
 type Props = {
     project: Project;
@@ -13,9 +12,6 @@ type Props = {
 };
 
 export const Article: React.FC<Props> = ({ project, views }) => {
-    const { theme } = useTheme();
-    const logo = theme === "light" && project.logoLight ? project.logoLight : project.logo;
-
     return (
         <Link href={`/projects/${project.slug}`}>
             <article className="p-4 md:p-8">
@@ -43,7 +39,15 @@ export const Article: React.FC<Props> = ({ project, views }) => {
                     <h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-foreground/80 group-hover:text-foreground font-display">
                         {project.title}
                     </h2>
-                    {logo && <Image src={`/images/${logo}`} alt={project.title} width={24} height={24} />}
+                    {project.logo && (
+                        <Image
+                            src={`/images/${project.logo}`}
+                            alt={project.title}
+                            width={24}
+                            height={24}
+                            className={project.logoLight ? "invert dark:invert-0" : ""}
+                        />
+                    )}
                 </span>
                 <p className="z-20 mt-4 text-sm duration-1000 text-muted-foreground group-hover:text-foreground/80">
                     {project.description}
