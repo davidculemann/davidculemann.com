@@ -25,7 +25,7 @@ export default function CVPage() {
                         Download CV
                     </a>
                 </Button>
-                <div className="container w-full h-full">
+                <div className="container w-full h-full relative">
                     <iframe
                         src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
                         className="absolute top-0 left-0 bottom-0 right-0 w-full h-full"
