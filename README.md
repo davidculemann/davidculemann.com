@@ -9,14 +9,14 @@ My personal website, built with [Next.js](https://nextjs.org/), [Tailwind CSS](h
 
 ## Credits
 
-- [Chronark](https://github.com/chronark) for the template this is based on
+-   [Chronark](https://github.com/chronark) for the template this is based on
 
 ## Stack
 
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Lucide Icons](https://lucide.dev/)
-- [Contentlayer](https://www.contentlayer.dev/)
-- [Upstash](https://upstash.com)
-- [Vercel](https://vercel.com/)
+-   [Next.js](https://nextjs.org/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [Tailwind CSS](https://tailwindcss.com/)
+-   [Lucide Icons](https://lucide.dev/)
+-   [Contentlayer](https://www.contentlayer.dev/)
+-   [Upstash](https://upstash.com)
+-   [Vercel](https://vercel.com/)
