@@ -19,6 +19,12 @@ export default function CVPage() {
         <div className="relative min-h-screen bg-gradient-to-tl from-background/0 via-background to-background/0">
             <Navigation />
             <div className="container flex flex-col gap-4 justify-center mx-auto h-screen w-full pt-24 pb-12 px-4 lg:px-48 items-center">
+                <Button asChild>
+                    <a href="/cv-david-culemann.pdf" download className="flex items-center gap-2 px-4 py-2">
+                        <Download size={16} />
+                        Download CV
+                    </a>
+                </Button>
                 <iframe
                     src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
                     className={cn(
@@ -26,13 +32,6 @@ export default function CVPage() {
                         mounted && theme === "dark" ? "[filter:invert(1)_hue-rotate(180deg)]" : ""
                     )}
                 />
-
-                <Button asChild>
-                    <a href="/cv-david-culemann.pdf" download className="flex items-center gap-2 px-4 py-2">
-                        <Download size={16} />
-                        Download CV
-                    </a>
-                </Button>
             </div>
         </div>
     );
