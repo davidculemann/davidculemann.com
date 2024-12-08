@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 import "../global.css";
 import { ThemeProvider } from "@/app/components/providers/theme-provider";
+import NavigationProgress from "./components/navigation-progress";
 
 export const metadata: Metadata = {
     title: {
@@ -59,6 +60,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </head>
             <body className={`bg-background ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined}`}>
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+                    <NavigationProgress />
                     {children}
                 </ThemeProvider>
             </body>
