@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
@@ -8,6 +8,14 @@ import "nprogress/nprogress.css";
 NProgress.configure({ showSpinner: false });
 
 export default function NavigationProgress() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ProgressBar />
+        </Suspense>
+    );
+}
+
+export function ProgressBar() {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
