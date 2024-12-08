@@ -70,7 +70,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
             <div className="container mx-auto relative isolate overflow-hidden py-24 sm:py-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8 text-center flex flex-col items-center">
                     <div className="mx-auto max-w-2xl lg:mx-0">
-                        <span className="flex items-center gap-6">
+                        <span className="flex items-center gap-6 justify-center">
                             <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-6xl font-display">
                                 {project.title}
                             </h1>

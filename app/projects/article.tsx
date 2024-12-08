@@ -3,6 +3,7 @@
 import type { Project } from "@/.contentlayer/generated";
 import Link from "next/link";
 import { Eye } from "lucide-react";
+import Image from "next/image";
 
 type Props = {
     project: Project;
@@ -27,9 +28,14 @@ export const Article: React.FC<Props> = ({ project, views }) => {
                         <Eye className="w-4 h-4" /> {Intl.NumberFormat("en-US", { notation: "compact" }).format(views)}
                     </span>
                 </div>
-                <h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-foreground/80 group-hover:text-foreground font-display">
-                    {project.title}
-                </h2>
+                <span className="flex items-center gap-2">
+                    <h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-foreground/80 group-hover:text-foreground font-display">
+                        {project.title}
+                    </h2>
+                    {project.logo && (
+                        <Image src={`/images/${project.logo}`} alt={project.title} width={24} height={24} />
+                    )}
+                </span>
                 <p className="z-20 mt-4 text-sm duration-1000 text-muted-foreground group-hover:text-foreground/80">
                     {project.description}
                 </p>
