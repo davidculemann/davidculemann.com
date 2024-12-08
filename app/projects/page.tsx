@@ -7,6 +7,7 @@ import { Article } from "./article";
 import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 import Image from "next/image";
+import ProfessionalPill from "../components/professional-pill";
 
 const redis = Redis.fromEnv();
 
@@ -38,7 +39,7 @@ export default async function ProjectsPage() {
                 <div className="max-w-2xl mx-auto lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Projects</h2>
                     <p className="mt-4 text-muted-foreground">
-                        Some of the projects are from work and some are on my own time.
+                        Some of the projects are from my professional work, and some are personal projects.
                     </p>
                 </div>
                 <div className="w-full h-px bg-border" />
@@ -48,17 +49,20 @@ export default async function ProjectsPage() {
                         <Link href={`/projects/${featured.slug}`}>
                             <article className="relative w-full h-full p-4 md:p-8">
                                 <div className="flex items-center justify-between gap-2">
-                                    <div className="text-xs text-foreground">
-                                        {featured.date ? (
-                                            <time dateTime={new Date(featured.date).toISOString()}>
-                                                {Intl.DateTimeFormat(undefined, {
-                                                    dateStyle: "medium",
-                                                }).format(new Date(featured.date))}
-                                            </time>
-                                        ) : (
-                                            <span>SOON</span>
-                                        )}
-                                    </div>
+                                    <span className="flex items-center gap-2">
+                                        <ProfessionalPill professional={featured.professional} />
+                                        <div className="text-xs text-foreground">
+                                            {featured.date ? (
+                                                <time dateTime={new Date(featured.date).toISOString()}>
+                                                    {Intl.DateTimeFormat(undefined, {
+                                                        dateStyle: "medium",
+                                                    }).format(new Date(featured.date))}
+                                                </time>
+                                            ) : (
+                                                <span>SOON</span>
+                                            )}
+                                        </div>
+                                    </span>
                                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                                         <Eye className="w-4 h-4" />{" "}
                                         {Intl.NumberFormat("en-US", { notation: "compact" }).format(

@@ -11,6 +11,7 @@ type Props = {
         description: string;
         logo?: string;
         repository?: string;
+        professional?: boolean;
     };
 
     views: number;
