@@ -7,6 +7,9 @@ module.exports = {
 
     theme: {
         extend: {
+            zIndex: {
+                100: "100",
+            },
             typography: {
                 DEFAULT: {
                     css: {
