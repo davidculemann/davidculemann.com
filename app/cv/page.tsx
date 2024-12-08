@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Navigation } from "../components/nav";
-import { Download, FileIcon } from "lucide-react";
+import { Download } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "../lib/utils";
 import { Button } from "../components/ui/button";
@@ -25,13 +25,12 @@ export default function CVPage() {
                         Download CV
                     </a>
                 </Button>
-                <iframe
-                    src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
-                    className={cn(
-                        "w-full h-full rounded-md max-w-screen-md",
-                        mounted && theme === "dark" ? "[filter:invert(1)_hue-rotate(180deg)]" : ""
-                    )}
-                />
+                <div className="container w-full h-full">
+                    <iframe
+                        src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
+                        className="absolute top-0 left-0 bottom-0 right-0 w-full h-full"
+                    />
+                </div>
             </div>
         </div>
     );
