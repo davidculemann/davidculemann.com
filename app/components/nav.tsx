@@ -3,10 +3,14 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { ModeToggle } from "./mode-toggle";
+import { usePathname } from "next/navigation";
+import { cn } from "../lib/utils";
 
 export const Navigation: React.FC = () => {
     const ref = useRef<HTMLElement>(null);
     const [isIntersecting, setIntersecting] = useState(true);
+
+    const pathname = usePathname();
 
     useEffect(() => {
         if (!ref.current) return;
@@ -25,13 +29,40 @@ export const Navigation: React.FC = () => {
             >
                 <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
                     <div className="flex justify-between gap-8 items-center">
-                        <Link href="/projects" className="duration-200 text-muted-foreground hover:text-foreground">
+                        <Link
+                            href="/projects"
+                            className={cn(
+                                "duration-200 text-muted-foreground hover:text-foreground",
+                                pathname === "/projects" && "text-foreground"
+                            )}
+                        >
                             Projects
                         </Link>
-                        <Link href="/cv" className="duration-200 text-muted-foreground hover:text-foreground">
+                        <Link
+                            href="/about"
+                            className={cn(
+                                "duration-200 text-muted-foreground hover:text-foreground",
+                                pathname === "/about" && "text-foreground"
+                            )}
+                        >
+                            About
+                        </Link>
+                        <Link
+                            href="/cv"
+                            className={cn(
+                                "duration-200 text-muted-foreground hover:text-foreground",
+                                pathname === "/cv" && "text-foreground"
+                            )}
+                        >
                             CV
                         </Link>
-                        <Link href="/contact" className="duration-200 text-muted-foreground hover:text-foreground">
+                        <Link
+                            href="/contact"
+                            className={cn(
+                                "duration-200 text-muted-foreground hover:text-foreground",
+                                pathname === "/contact" && "text-foreground"
+                            )}
+                        >
                             Contact
                         </Link>
                         <ModeToggle />
