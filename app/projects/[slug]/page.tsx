@@ -45,7 +45,7 @@ export default async function PostPage(props: Props) {
             <article className="px-4 py-12 mx-auto prose prose-zinc prose-quoteless">
                 <Mdx code={project.body.code} />
             </article>
-            <Comments />
+            <Comments repository={project.repository} repositoryId={project.repositoryId} />
         </div>
     );
 }
