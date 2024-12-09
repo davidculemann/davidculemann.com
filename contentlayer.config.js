@@ -45,6 +45,9 @@ export const Project = defineDocumentType(() => ({
         repositoryId: {
             type: "string",
         },
+        repositoryName: {
+            type: "string",
+        },
         logo: {
             type: "string",
         },
