@@ -11,7 +11,7 @@ export default function About() {
         <div className="bg-gradient-to-tl from-background/0 via-background to-background/0">
             <Navigation />
             <div className="px-6 pt-20 mx-auto space-y-8 max-w-7xl lg:px-8 md:space-y-16 md:pt-24 lg:pt-32">
-                <Card className="max-w-4xl mx-auto border-none">
+                <Card className="max-w-4xl mx-auto border-none shadow-none">
                     <CardHeader className="text-center">
                         <div className="flex justify-center mb-4">
                             <Avatar className="w-32 h-32">
