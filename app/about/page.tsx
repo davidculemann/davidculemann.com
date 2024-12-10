@@ -26,8 +26,8 @@ export default function About() {
                         <section className="mb-8 flex flex-col gap-4">
                             <h2 className="text-2xl font-semibold mb-2">About Me</h2>
                             <p className="text-muted-foreground">
-                                Hello 👋, I'm David, a full stack developer with a bias towards frontend development. I
-                                am currently a senior software engineer at{" "}
+                                Hello 👋, I'm David, a full stack developer with a bias towards frontend. I am currently
+                                senior software engineer at{" "}
                                 <Link
                                     href="https://www.darktrace.com"
                                     target="_blank"
@@ -53,19 +53,19 @@ export default function About() {
                                     Carno
                                 </Link>
                                 , where I was working towards building heat-pump installation software to drive domestic
-                                heating decarbonisation throu.
+                                heating decarbonisation.
                             </p>
                             <p className="text-muted-foreground">
                                 I love building apps in my free time, you can find some featured projects I've worked on
-                                in my{" "}
+                                in the{" "}
                                 <Link
                                     href="/projects"
                                     className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
                                 >
                                     projects
-                                </Link>
-                                . You can also leave a comment on each project with the embedded GitHub comments powered
-                                by Giscus if you have any questions or feedback.
+                                </Link>{" "}
+                                page. You can also leave a comment on each project with the embedded GitHub discussions
+                                powered by Giscus if you have any questions or feedback.
                             </p>
                             <p className="text-muted-foreground">
                                 Outside of coding, I'm a big fan of watching{" "}
