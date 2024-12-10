@@ -6,6 +6,24 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app
 import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
 import Link from "next/link";
 
+const STACK = [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Remix",
+    "Next.js",
+    "React Query",
+    "Redux + Zustand",
+    "Cytoscape",
+    "CSS",
+    "Tailwind",
+    "Shadcn",
+    "Supabase",
+    "Firebase",
+    "GitLab CI",
+    "Stripe",
+];
+
 export default function About() {
     return (
         <div className="bg-gradient-to-tl from-background/0 via-background to-background/0">
@@ -83,23 +101,7 @@ export default function About() {
                         <section className="mb-8">
                             <h2 className="text-2xl font-semibold mb-4">Stack</h2>
                             <div className="flex flex-wrap gap-2">
-                                {[
-                                    "React",
-                                    "TypeScript",
-                                    "JavaScript",
-                                    "Remix",
-                                    "Next.js",
-                                    "React Query",
-                                    "Redux + Zustand",
-                                    "Cytoscape",
-                                    "CSS",
-                                    "Tailwind",
-                                    "Shadcn",
-                                    "Supabase",
-                                    "Firebase",
-                                    "GitLab CI",
-                                    "Stripe",
-                                ].map((skill) => (
+                                {STACK.map((skill) => (
                                     <Badge key={skill} variant="secondary">
                                         {skill}
                                     </Badge>
