@@ -15,7 +15,7 @@ export default function About() {
                     <CardHeader className="text-center">
                         <div className="flex justify-center mb-4">
                             <Avatar className="w-32 h-32">
-                                <AvatarImage src="/placeholder.svg?height=128&width=128" alt="Profile picture" />
+                                <AvatarImage src="/images/me.jpg" alt="Profile picture" />
                                 <AvatarFallback>DC</AvatarFallback>
                             </Avatar>
                         </div>
