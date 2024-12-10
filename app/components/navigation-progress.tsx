@@ -9,7 +9,7 @@ NProgress.configure({ showSpinner: false });
 
 export default function NavigationProgress() {
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense>
             <ProgressBar />
         </Suspense>
     );
