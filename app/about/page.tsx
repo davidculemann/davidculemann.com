@@ -68,7 +68,7 @@ export default function About() {
                                 powered by Giscus if you have any questions or feedback.
                             </p>
                             <p className="text-muted-foreground">
-                                Outside of coding, I'm a big fan of watching{" "}
+                                Outside of coding, I'm a big fan of{" "}
                                 <Link
                                     href="https://letterboxd.com/davidculemann/"
                                     target="_blank"
@@ -97,7 +97,7 @@ export default function About() {
                                     "Shadcn",
                                     "Supabase",
                                     "Firebase",
-                                    "Gitlab CI",
+                                    "GitLab CI",
                                     "Stripe",
                                 ].map((skill) => (
                                     <Badge key={skill} variant="secondary">
