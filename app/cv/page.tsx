@@ -18,21 +18,27 @@ export default function CVPage() {
     return (
         <div className="relative min-h-screen bg-gradient-to-tl from-background/0 via-background to-background/0">
             <Navigation />
-            <div className="container flex flex-col gap-4 justify-center mx-auto h-screen w-full pt-24 pb-12 px-4 lg:px-48 items-center">
-                <Button asChild>
-                    <a href="/cv-david-culemann.pdf" download className="flex items-center gap-2 px-4 py-2">
-                        <Download size={16} />
-                        Download CV
-                    </a>
-                </Button>
-                <div className="container w-full h-full relative">
-                    <iframe
-                        src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
-                        className={cn(
-                            "absolute top-0 left-0 bottom-0 right-0 w-full h-full max-w-full max-h-[calc(100vh-200px)]",
-                            mounted && theme === "dark" ? "[filter:invert(1)_hue-rotate(180deg)]" : ""
-                        )}
-                    />
+            <div className="container mx-auto px-4 pt-24 pb-12">
+                <div className="max-w-4xl mx-auto flex flex-col gap-4">
+                    <Button asChild>
+                        <a
+                            href="/cv-david-culemann.pdf"
+                            download
+                            className="flex items-center gap-2 px-4 py-2 flex-grow-0"
+                        >
+                            <Download size={16} />
+                            Download CV
+                        </a>
+                    </Button>
+                    <div className="relative w-full aspect-[1/1.414]">
+                        <iframe
+                            src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
+                            className={cn(
+                                "absolute inset-0 w-full h-full",
+                                mounted && theme === "dark" ? "[filter:invert(1)_hue-rotate(180deg)]" : ""
+                            )}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
