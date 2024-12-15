@@ -27,10 +27,10 @@ export default function CVPage() {
                         </a>
                     </Button>
                     <div className="relative w-full aspect-[1/1.414]">
-                        <iframe
-                            src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
+                        <object
+                            data="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
                             className={cn(
-                                "absolute inset-0 w-full h-full",
+                                "absolute inset-0 w-full h-full border-none",
                                 mounted && theme === "dark" ? "[filter:invert(1)_hue-rotate(180deg)]" : ""
                             )}
                         />
