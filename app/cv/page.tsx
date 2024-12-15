@@ -19,13 +19,9 @@ export default function CVPage() {
         <div className="relative min-h-screen bg-gradient-to-tl from-background/0 via-background to-background/0">
             <Navigation />
             <div className="container mx-auto px-4 pt-24 pb-12">
-                <div className="max-w-4xl mx-auto flex flex-col gap-4">
+                <div className="max-w-4xl mx-auto flex flex-col gap-4 items-center">
                     <Button asChild>
-                        <a
-                            href="/cv-david-culemann.pdf"
-                            download
-                            className="flex items-center gap-2 px-4 py-2 flex-grow-0"
-                        >
+                        <a href="/cv-david-culemann.pdf" download className="flex items-center gap-2 px-4 py-2 w-fit">
                             <Download size={16} />
                             Download CV
                         </a>
