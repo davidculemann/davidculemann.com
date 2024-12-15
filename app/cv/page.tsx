@@ -29,7 +29,7 @@ export default function CVPage() {
                     <iframe
                         src="/cv-david-culemann.pdf#view=FitH&toolbar=0&navpanes=0&scrollbar=0"
                         className={cn(
-                            "absolute top-0 left-0 bottom-0 right-0 w-full h-full",
+                            "absolute top-0 left-0 bottom-0 right-0 w-full [height:900px] md:h-full",
                             mounted && theme === "dark" ? "[filter:invert(1)_hue-rotate(180deg)]" : ""
                         )}
                     />
