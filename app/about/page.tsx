@@ -1,10 +1,10 @@
 "use client";
 
-import { Navigation } from "../components/nav";
+import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
 import { Badge } from "@/app/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/app/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
 import Link from "next/link";
+import { Navigation } from "../components/nav";
 
 const STACK = [
     "React",
@@ -63,7 +63,7 @@ export default function About() {
                                 </Link>
                                 . Before that, I was founding engineer at{" "}
                                 <Link
-                                    href="https://www.darktrace.com"
+                                    href="https://www.carno.io"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
