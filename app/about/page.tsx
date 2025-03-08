@@ -38,14 +38,14 @@ export default function About() {
                             </Avatar>
                         </div>
                         <CardTitle className="text-3xl font-bold">David Culemann</CardTitle>
-                        <CardDescription className="text-xl">Frontend/Full Stack Developer</CardDescription>
+                        <CardDescription className="text-xl">Frontend & Full Stack Developer</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <section className="mb-8 flex flex-col gap-4">
                             <h2 className="text-2xl font-semibold mb-2">About Me</h2>
                             <p className="text-muted-foreground">
-                                Hello 👋, I'm David, a full stack developer with a bias towards frontend. I am currently
-                                senior software engineer at{" "}
+                                Hello 👋 I'm David, a frontend developer sometimes doing full stack work. Currently, I'm a
+                                Senior Software Engineer at{" "}
                                 <Link
                                     href="https://www.darktrace.com"
                                     target="_blank"
@@ -54,7 +54,7 @@ export default function About() {
                                 >
                                     Darktrace
                                 </Link>
-                                , where I lead UI development on{" "}
+                                , where I lead UI development for{" "}
                                 <Link
                                     href="/projects/darktrace-cloud"
                                     className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
@@ -70,20 +70,18 @@ export default function About() {
                                 >
                                     Carno
                                 </Link>
-                                , where I was working towards building heat-pump installation software to drive domestic
-                                heating decarbonisation.
+                                , where I developed heat-pump installation software to accelerate domestic
+                                heating decarbonization.
                             </p>
                             <p className="text-muted-foreground">
-                                I love building apps in my free time, you can find some featured projects I've worked on
-                                in the{" "}
+                                In my free time, I enjoy building applications and exploring new technologies. You can explore some of my featured work on the{" "}
                                 <Link
                                     href="/projects"
                                     className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
                                 >
                                     projects
                                 </Link>{" "}
-                                page. You can also leave a comment on each project with the embedded GitHub discussions
-                                powered by Giscus if you have any questions or feedback.
+                                page. Feel free to leave comments and feedback through the embedded GitHub discussions powered by Giscus.
                             </p>
                             <p className="text-muted-foreground">
                                 Outside of coding, I'm a big fan of{" "}
