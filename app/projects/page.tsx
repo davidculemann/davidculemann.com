@@ -19,9 +19,9 @@ export default async function ProjectsPage() {
         return acc;
     }, {} as Record<string, number>);
 
-    const featured = allProjects.find((project) => project.slug === "darktrace-cloud")!;
-    const top2 = allProjects.find((project) => project.slug === "corpify")!;
-    const top3 = allProjects.find((project) => project.slug === "davidculemann")!;
+    const featured = allProjects.find((project) => project.slug === "lawhive")!;
+    const top2 = allProjects.find((project) => project.slug === "easycv")!;
+    const top3 = allProjects.find((project) => project.slug === "corpify")!;
     const sorted = allProjects
         .filter((p) => p.published)
         .filter((project) => project.slug !== featured.slug && project.slug !== top2.slug && project.slug !== top3.slug)
@@ -78,7 +78,7 @@ export default async function ProjectsPage() {
                                     {featured.logo && (
                                         <Image
                                             src={`/images/${featured.logo}`}
-                                            alt="Darktrace Cloud"
+                                            alt="Lawhive"
                                             width={44}
                                             height={44}
                                         />
