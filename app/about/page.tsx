@@ -10,9 +10,13 @@ const STACK = [
     "React",
     "TypeScript",
     "JavaScript",
-    "Express",
     "Remix",
     "Next.js",
+    "Shadcn",
+    "Tailwind",
+    "CSS",
+    "SASS",
+    "Express",
     "rRPC",
     "Prisma",
     "PostgreSQL",
@@ -20,10 +24,7 @@ const STACK = [
     "Redux",
     "Zustand",
     "Cytoscape",
-    "CSS",
-    "SASS",
-    "Tailwind",
-    "Shadcn",
+    "React Hook Form",
     "Supabase",
     "Firebase",
     "MongoDB",
@@ -31,6 +32,7 @@ const STACK = [
     "GitLab CI",
     "Graphite",
     "Stripe",
+    "Biome"
 ];
 
 export default function About() {
