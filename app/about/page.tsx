@@ -10,17 +10,26 @@ const STACK = [
     "React",
     "TypeScript",
     "JavaScript",
+    "Express",
     "Remix",
     "Next.js",
-    "React Query",
-    "Redux + Zustand",
+    "rRPC",
+    "Prisma",
+    "PostgreSQL",
+    "Tanstack Query",
+    "Redux",
+    "Zustand",
     "Cytoscape",
     "CSS",
+    "SASS",
     "Tailwind",
     "Shadcn",
     "Supabase",
     "Firebase",
+    "MongoDB",
+    "Docker",
     "GitLab CI",
+    "Graphite",
     "Stripe",
 ];
 
@@ -38,14 +47,23 @@ export default function About() {
                             </Avatar>
                         </div>
                         <CardTitle className="text-3xl font-bold">David Culemann</CardTitle>
-                        <CardDescription className="text-xl">Frontend & Full Stack Developer</CardDescription>
+                        <CardDescription className="text-xl">Senior Fullstack Software Engineer</CardDescription>
                     </CardHeader>
                     <CardContent>
                         <section className="mb-8 flex flex-col gap-4">
                             <h2 className="text-2xl font-semibold mb-2">About Me</h2>
                             <p className="text-muted-foreground">
-                                Hello 👋 I'm David, a frontend developer sometimes doing full stack work. Currently, I'm a
-                                Senior Software Engineer at{" "}
+                                Hello 👋 I'm David, a fullstack software engineer. Currently, I'm a
+                                Senior Fullstack Software Engineer at{" "}
+                                <Link
+                                    href="https://lawhive.com"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
+                                >
+                                    Lawhive
+                                </Link>
+                                , where I build innovative legal technology solutions. Previously, I was a Senior Software Engineer at{" "}
                                 <Link
                                     href="https://www.darktrace.com"
                                     target="_blank"
@@ -54,7 +72,7 @@ export default function About() {
                                 >
                                     Darktrace
                                 </Link>
-                                , where I lead UI development for{" "}
+                                , where I led UI development for{" "}
                                 <Link
                                     href="/projects/darktrace-cloud"
                                     className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
