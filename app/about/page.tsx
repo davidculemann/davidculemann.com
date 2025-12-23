@@ -17,7 +17,7 @@ const STACK = [
     "CSS",
     "SASS",
     "Express",
-    "rRPC",
+    "tRPC",
     "Prisma",
     "PostgreSQL",
     "Tanstack Query",
@@ -32,7 +32,9 @@ const STACK = [
     "GitLab CI",
     "Graphite",
     "Stripe",
-    "Biome"
+    "Biome",
+    "PostHog",
+    "SEO",
 ];
 
 export default function About() {
@@ -101,7 +103,12 @@ export default function About() {
                                 >
                                     projects
                                 </Link>{" "}
-                                page. Feel free to leave comments and feedback through the embedded GitHub discussions powered by Giscus.
+                                page. My current side project is <Link
+                                    href="/projects/jobsprout"
+                                    className="underline decoration-primary underline-offset-4 hover:text-primary transition-colors"
+                                >
+                                    JobSprout
+                                </Link>, a modern CV and cover letter builder that combines professional typesetting with context-aware AI assistance.
                             </p>
                             <p className="text-muted-foreground">
                                 Outside of coding, I'm a big fan of{" "}
@@ -117,7 +124,7 @@ export default function About() {
                             </p>
                         </section>
                         <section className="mb-8">
-                            <h2 className="text-2xl font-semibold mb-4">Stack</h2>
+                            <h2 className="text-2xl font-semibold mb-4">Tools</h2>
                             <div className="flex flex-wrap gap-2">
                                 {STACK.map((skill) => (
                                     <Badge key={skill} variant="secondary">

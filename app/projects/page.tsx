@@ -19,8 +19,8 @@ export default async function ProjectsPage() {
         return acc;
     }, {} as Record<string, number>);
 
-    const featured = allProjects.find((project) => project.slug === "lawhive")!;
-    const top2 = allProjects.find((project) => project.slug === "easycv")!;
+    const featured = allProjects.find((project) => project.slug === "jobsprout")!;
+    const top2 = allProjects.find((project) => project.slug === "lawhive")!;
     const top3 = allProjects.find((project) => project.slug === "corpify")!;
     const sorted = allProjects
         .filter((p) => p.published)
@@ -78,7 +78,7 @@ export default async function ProjectsPage() {
                                     {featured.logo && (
                                         <Image
                                             src={`/images/${featured.logo}`}
-                                            alt="Lawhive"
+                                            alt={featured.title}
                                             width={44}
                                             height={44}
                                         />
