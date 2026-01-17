@@ -32,9 +32,31 @@ const components = {
     h6: ({ className, ...props }) => (
         <h6 className={clsx("mt-8 scroll-m-20 text-base font-semibold tracking-tight", className)} {...props} />
     ),
-    a: ({ className, ...props }) => (
-        <Link className={clsx("font-medium text-zinc-900 underline underline-offset-4", className)} {...props} />
-    ),
+    a: ({ className, href, children, ...props }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => {
+        const isExternal = href?.startsWith("http://") || href?.startsWith("https://");
+        if (isExternal) {
+            return (
+                <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener"
+                    className={clsx("font-medium text-zinc-900 underline underline-offset-4", className)}
+                    {...props}
+                >
+                    {children}
+                </a>
+            );
+        }
+        return (
+            <Link
+                href={href || ""}
+                className={clsx("font-medium text-zinc-900 underline underline-offset-4", className)}
+                {...props}
+            >
+                {children}
+            </Link>
+        );
+    },
     p: ({ className, ...props }) => (
         <p className={clsx("leading-7 [&:not(:first-child)]:mt-6", className)} {...props} />
     ),

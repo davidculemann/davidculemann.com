@@ -6,6 +6,7 @@ import "./mdx.css";
 import { ReportView } from "./view";
 import { Redis } from "@upstash/redis";
 import Comments from "@/app/components/comments";
+import type { Metadata } from "next";
 
 export const revalidate = 60;
 
@@ -14,6 +15,32 @@ type Props = {
         slug: string;
     }>;
 };
+
+export async function generateMetadata(props: Props): Promise<Metadata> {
+    const params = await props.params;
+    const project = allProjects.find((p) => p.slug === params?.slug);
+
+    if (!project) {
+        return {};
+    }
+
+    return {
+        title: project.title,
+        description: project.description,
+        openGraph: {
+            title: project.title,
+            description: project.description,
+            type: "article",
+            url: `https://davidculemann.com/projects/${project.slug}`,
+            ...(project.date && { publishedTime: new Date(project.date).toISOString() }),
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: project.title,
+            description: project.description,
+        },
+    };
+}
 
 const redis = Redis.fromEnv();
 export async function generateStaticParams(): Promise<Props["params"][]> {
